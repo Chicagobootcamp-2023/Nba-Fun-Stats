@@ -11,13 +11,14 @@ body {
     background-image: url('nba-logo-background-1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    color: red;
+    background-position: fixed;
+    background-color: red;;
     padding: 0 20px;
 }
 
 ::selection {
     color: #fff;
-    background: #664AFF;
+    background: red;
 }
 
 .wrapper {
@@ -76,18 +77,32 @@ body {
 }
 
 .autocom-box li:hover {
-    background: #efefef;
+    background: red;
+    color: white;
 }
 
 .search-input .icon {
     position: absolute;
-    right: 0px;
+    right: 40px;
     top: 0px;
     height: 55px;
-    width: 55px;
+    width: 25px;
     text-align: center;
     line-height: 55px;
     font-size: 20px;
-    color: #644bff;
+    color: red;
+    cursor: pointer;
+}
+
+.search-input .clear {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    height: 55px;
+    width: 25px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: red;
     cursor: pointer;
 }
