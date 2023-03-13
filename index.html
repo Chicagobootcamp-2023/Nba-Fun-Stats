@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
     <title>NBA Video and Gif Generator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <h1>Fun NBA Stats Generator</h1>
-        <div class="search-input">
-          <a href="" target="_blank" hidden></a>
-          <input type="text" placeholder="Type to search..">
-          <div class="autocom-box">
-            <!-- here list are inserted from javascript -->
-          </div>
-          <div class="icon"><i class="fas fa-search"></i></div>
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          <!-- Team Names populate here -->
         </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+
+        <div class="clear"><i class="fa fa-trash"></i></div>
+      </div>
     </div>
     <section id="giphy-images" class="image-space"></section>
+  
     <script src="assets/js/teams.js"></script>
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
