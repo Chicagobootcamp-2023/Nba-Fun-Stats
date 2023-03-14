@@ -135,11 +135,10 @@ body {
 
 =======
 .youtube-section {
-    position: left;
-}
-
-.gif-section {
-    position: right;
+    position: absolute;
+    right: 800px;
+    top: 250px;
+    background-color: red;
 }
 <<<<<<< HEAD
 >>>>>>> main
@@ -149,7 +148,14 @@ body {
     position: absolute;
     height: 100px;
     width: 100px;
+<<<<<<< HEAD
     right: -50px;
     top: 50px;
+}
+>>>>>>> main
+=======
+    right: 650px;
+    top: 250px;
+    background-color: red;
 }
 >>>>>>> main
