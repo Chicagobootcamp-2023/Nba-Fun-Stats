@@ -70,13 +70,14 @@ function clearScreen() {
 };
 
 function displayGiphys(event) {
-  event.preventDefault()
+  event.preventDefault();
   
-  var searchTerm = inputBox.value
+  var searchTerm = inputBox.value;
   console.log(searchTerm);
-  var apiKey = 'X1UC9EboOvWecSBjWd0oHOvipre8bgHX'
-  var giphyUrl = 'https://api.giphy.com/v1/gifs/search'
-  var requestUrl = giphyUrl + '?api_key=' + apiKey + '&limit=5&rating=g&q=' + searchTerm
+  var apiKey = 'X1UC9EboOvWecSBjWd0oHOvipre8bgHX';
+  var giphyUrl = 'https://api.giphy.com/v1/gifs/search';
+  var offset = Math.floor(Math.random() * 200); // generate a random offset between 0 and 200
+  var requestUrl = giphyUrl + '?api_key=' + apiKey + '&limit=5&rating=g&q=' + searchTerm + '&offset=' + offset;
   
   fetch(requestUrl)
   .then(function(response) {
@@ -85,16 +86,15 @@ function displayGiphys(event) {
   }).then(function(giphs) {
     console.log('You searched for:', giphs.data);
     for (var i = 0; i < giphs.data.length; i++) {
-      var title = giphs.data[i].title
-      var imageTag = document.createElement('img')
-      var imageTitle = document.createElement('p')
-      imageTag.setAttribute('src', giphs.data[i].images.original.url)
-      imageTitle.textContent = title
-      imageContainer.append(imageTag)
+      var title = giphs.data[i].title;
+      var imageTag = document.createElement('img');
+      var imageTitle = document.createElement('p');
+      imageTag.setAttribute('src', giphs.data[i].images.original.url);
+      imageTitle.textContent = title;
+      imageContainer.append(imageTag);
     }
   });
 };
-  
 //Youtube Api
 //fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=relevance&q=surfing&key=AIzaSyD51ROkLO7Tj0gCUhdXzYzD-EmqGUCV1iI')
 // Replace YOUR_API_KEY with your actual YouTube API key
