@@ -8,11 +8,15 @@
 }
 
 body {
+<<<<<<< HEAD
     
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
     background-color: red;;
+=======
+    background-color: rgb(88, 3, 3);;
+>>>>>>> main
     padding: 0 20px;
 }
 
@@ -95,6 +99,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .search-input .clear {
     position: absolute;
     right: 10px;
@@ -138,12 +143,21 @@ body {
     position: absolute;
     right: 800px;
     top: 250px;
+=======
+.generated-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.generated-content .youtube-section {
+>>>>>>> main
     background-color: red;
 }
 <<<<<<< HEAD
 >>>>>>> main
 =======
 
+<<<<<<< HEAD
 .gif-section {
     position: absolute;
     height: 100px;
@@ -157,5 +171,13 @@ body {
     right: 650px;
     top: 250px;
     background-color: red;
+}
+>>>>>>> main
+=======
+.generated-content .gif-section {
+    background-color: red;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
 }
 >>>>>>> main
