@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('nba-logo-background-1.png');
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -106,3 +106,29 @@ body {
     color: red;
     cursor: pointer;
 }
+#header {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: white;
+    background-color: black;
+}
+.nav {
+    padding: 200px;
+    background-image: url('nba-logo-background-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    background-size: cover;
+    
+}
+.subheader {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color: white;
+    padding: 100px;
+    background-color: black;
+}
+

@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NBA Video and Gif Generator</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="search-input">
-        <a href="" target="_blank" hidden></a>
-        <input type="text" placeholder="Type to search..">
-        <div class="autocom-box">
-          <!-- Team Names populate here -->
-        </div>
-        <div class="icon"><i class="fas fa-search"></i></div>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-        <div class="clear"><i class="fa fa-trash"></i></div>
+  <title>NBA Video and Gif Generator</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav">
+    </div>
+  </nav>
+  <div>
+    <h1 id="header">The Hoop Wizard</h1>
+    <p class="subheader">Find images and videos for one of the NBA teams that you're interested in searching for!</p>
+  </div>
+  <div id="name-image" style>
+    <h1 id="team-name"></h1>
+  </div>
+  <div id="video-gif">
+    <div id="youtube-section" style></div>
+    <div id="gif-section" style></div>
+  </div>
+  <div class="wrapper">
+    <div class="search-input">
+      <a href="" target="_blank" hidden></a>
+      <input type="text" placeholder="Type to search..">
+      <div class="autocom-box">
+        <!-- Team Names populate here -->
       </div>
+      <div class="icon"><i class="fas fa-search"></i></div>
+
+      <div class="clear"><i class="fa fa-trash"></i></div>
     </div>
-    <div id="player"></div>
-    </div>
-    <section id="giphy-images" class="image-space"></section>
-  
-    <script src="assets/js/teams.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+  </div>
+  <div id="player"></div>
+  </div>
+  <section id="giphy-images" class="image-space"></section>
+
+  <script src="assets/js/teams.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
