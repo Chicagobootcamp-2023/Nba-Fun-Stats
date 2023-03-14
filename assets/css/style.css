@@ -83,23 +83,10 @@ body {
 
 .search-input .icon {
     position: absolute;
-    right: 40px;
+    right: 0px;
     top: 0px;
     height: 55px;
-    width: 25px;
-    text-align: center;
-    line-height: 55px;
-    font-size: 20px;
-    color: red;
-    cursor: pointer;
-}
-
-.search-input .clear {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    height: 55px;
-    width: 25px;
+    width: 55px;
     text-align: center;
     line-height: 55px;
     font-size: 20px;
