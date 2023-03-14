@@ -1,4 +1,4 @@
-# NBA Video and Gif Generator
+# Hoop Wizard
 
 ## Description
 
