@@ -1,11 +1,11 @@
-const myApi = 'AIzaSyD51ROkLO7Tj0gCUhdXzYzD-EmqGUCV1iI';
+// const myApi = 'AIzaSyBsKnp4M8x1OCA7xNSRIJ-BN98k1nQ6FZo';
 const googleUrl = 'https://www.googleapis.com/youtube/v3';
 
 let player;
 
 function search() {
   const query = document.getElementById('query').value;
-  const url = `${googleUrl}/search?key=${myApi}&part=snippet&q=${query}&type=video&videoEmbeddable=true&maxResults=1&videoDuration=short&enablejsapi=1`;
+  const url = `${googleUrl}/search?key=${myApi}&part=snippet&q=${query}&type=video&videoEmbeddable=true&maxResults=1&videoDuration=short`;
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -38,7 +38,7 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
 }
 
-document.querySelector('form').addEventListener('submit', function(event) {
+document.querySelector('.icon').addEventListener('click', function(event) {
   event.preventDefault();
   search();
   document.getElementById('query').value = '';
