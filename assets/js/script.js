@@ -14,10 +14,10 @@
 // Autocomplete widget
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
-const teamBox = searchWrapper.querySelector(".autocom-box");
-const icon = searchWrapper.querySelector(".icon");
+const teamBox = searchWrapper.querySelector(".autocomplete");
+const searchButton = searchWrapper.querySelector(".search-button");
 var imageContainer = document.querySelector('#giphy-images')
-let linkTag = searchWrapper.querySelector("a");
+// let linkTag = searchWrapper.querySelector("a");
 let webLink;
 
 // if user press any key and release
@@ -120,4 +120,4 @@ imageContainer.addEventListener("click", function(event) {
   }
 });
 
-icon.addEventListener('click', displayGiphys);
+searchButton.addEventListener('click', displayGiphys);

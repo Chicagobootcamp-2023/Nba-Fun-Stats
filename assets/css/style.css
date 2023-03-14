@@ -21,12 +21,12 @@ body {
     background: red;
 }
 
-.wrapper {
+.search-bar {
     max-width: 450px;
     margin: 150px auto;
 }
 
-.wrapper .search-input {
+.search-bar .search-input {
     background: #fff;
     width: 100%;
     border-radius: 5px;
@@ -49,7 +49,7 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
-.search-input .autocom-box {
+.search-input .autocomplete {
     padding: 0;
     opacity: 0;
     pointer-events: none;
@@ -57,13 +57,13 @@ body {
     overflow-y: auto;
 }
 
-.search-input.active .autocom-box {
+.search-input.active .autocomplete {
     padding: 10px 8px;
     opacity: 1;
     pointer-events: auto;
 }
 
-.autocom-box li {
+.autocomplete li {
     list-style: none;
     padding: 8px 12px;
     display: none;
@@ -72,16 +72,16 @@ body {
     border-radius: 3px;
 }
 
-.search-input.active .autocom-box li {
+.search-input.active .autocomplete li {
     display: block;
 }
 
-.autocom-box li:hover {
+.autocomplete li:hover {
     background: red;
     color: white;
 }
 
-.search-input .icon {
+.search-input .search-button {
     position: absolute;
     right: 0px;
     top: 0px;
@@ -92,4 +92,12 @@ body {
     font-size: 20px;
     color: red;
     cursor: pointer;
+}
+
+.youtube-section {
+    position: left;
+}
+
+.gif-section {
+    position: right;
 }
