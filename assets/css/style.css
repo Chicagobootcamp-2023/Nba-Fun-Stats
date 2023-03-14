@@ -8,15 +8,7 @@
 }
 
 body {
-<<<<<<< HEAD
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: fixed;
-    background-color: red;;
-=======
     background-color: rgb(88, 3, 3);;
->>>>>>> main
     padding: 0 20px;
 }
 
@@ -98,86 +90,40 @@ body {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.search-input .clear {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    height: 55px;
-    width: 25px;
-    text-align: center;
-    line-height: 55px;
-    font-size: 20px;
-    color: red;
-    cursor: pointer;
-}
-#header {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 100px;
-    color: white;
-    background-color: black;
-}
-.nav {
-    padding: 200px;
-    background-image: url('nba-logo-background-1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: contain;
-    background-size: cover;
-    
-}
-.subheader {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px;
-    color: white;
-    padding: 100px;
-    background-color: black;
-}
-
-=======
-.youtube-section {
-    position: absolute;
-    right: 800px;
-    top: 250px;
-=======
 .generated-content {
     display: flex;
     justify-content: space-evenly;
 }
 
 .generated-content .youtube-section {
->>>>>>> main
     background-color: red;
 }
-<<<<<<< HEAD
->>>>>>> main
-=======
 
-<<<<<<< HEAD
-.gif-section {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-<<<<<<< HEAD
-    right: -50px;
-    top: 50px;
-}
->>>>>>> main
-=======
-    right: 650px;
-    top: 250px;
-    background-color: red;
-}
->>>>>>> main
-=======
 .generated-content .gif-section {
     background-color: red;
     display: flex;
     flex-direction:column;
     align-items: center;
 }
->>>>>>> main
+
+h1 {
+    text-align: center;
+    color: white;
+    border-width:3px; 
+    border-style:solid; 
+    border-color:#FF0000; 
+    padding: 1em;
+    font-size: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image:url(nba-logo-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    margin: 100px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
