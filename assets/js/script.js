@@ -14,10 +14,10 @@
 // Autocomplete widget
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
-const teamBox = searchWrapper.querySelector(".autocom-box");
-const icon = searchWrapper.querySelector(".icon");
+const teamBox = searchWrapper.querySelector(".autocomplete");
+const searchButton = searchWrapper.querySelector(".search-button");
 var imageContainer = document.querySelector('#giphy-images')
-let linkTag = searchWrapper.querySelector("a");
+// let linkTag = searchWrapper.querySelector("a");
 let webLink;
 
 // if user press any key and release
@@ -62,13 +62,6 @@ function showTeams(list) {
   teamBox.innerHTML = listData;
 }
 
-// Clear Button
-var clearBtn = document.querySelector('.clear')
-
-function clearScreen() {
-  location.reload();
-};
-
 function displayGiphys(event) {
   event.preventDefault();
   
@@ -83,58 +76,48 @@ function displayGiphys(event) {
   .then(function(response) {
     console.log('The status of this page is', response.status + '.');
     return response.json();
+    
   }).then(function(giphs) {
     console.log('You searched for:', giphs.data);
+    imageContainer.innerHTML = ''
+
     for (var i = 0; i < giphs.data.length; i++) {
       var title = giphs.data[i].title;
       var imageTag = document.createElement('img');
       var imageTitle = document.createElement('p');
-      imageTag.setAttribute('src', giphs.data[i].images.original.url);
+      imageTag.setAttribute('src', giphs.data[i].images.original_still.url);
+      imageTag.setAttribute('data-animate', giphs.data[i].images.original.url);
+      imageTag.setAttribute('data-still', giphs.data[i].images.original_still.url);
+      imageTag.setAttribute('data-state', "still")
       imageTitle.textContent = title;
       imageContainer.append(imageTag);
     }
   });
 };
-//Youtube Api
-//fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=relevance&q=surfing&key=AIzaSyD51ROkLO7Tj0gCUhdXzYzD-EmqGUCV1iI')
-// Replace YOUR_API_KEY with your actual YouTube API key
-const ytApiKey = 'AIzaSyD51ROkLO7Tj0gCUhdXzYzD-EmqGUCV1iI';
-const ytUrl = 'https://www.googleapis.com/youtube/v3';
 
-let player;
+// Listen for any clicks within the img-container div
+imageContainer.addEventListener("click", function(event) {
+  var element = event.target;
+  console.log('target', event.target);
+  // Check if the clicked element was an image
+  if (element.matches("img")) {
+    // Get the current value of the image's data-state attribute
+    var state = element.getAttribute("data-state");
 
-function search() {
-  const query = document.getElementById('query').value;
-  const url = `${ytUrl}/search?key=${ytApiKey}&part=snippet&q=${query}&type=video`;
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const videoId = data.items[0].id.videoId;
-      play(videoId);
-    })
-    .catch(error => console.error(error))
-}
+    if (state === "still") {
+      // Change the data-state attribute's value
+      // There are two different ways this attribute can be set
+      element.dataset.state = "animate";
+      element.setAttribute("data-state", "animate");
 
-//Get the video to play
-function play(videoId) {
-  if (player) {
-    player.loadVideoById(videoId);
-  } else {
-    player = new ytApiKey.Player('player', {
-      height: '360',
-      width: '640',
-      videoId: videoId,
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    })
+      // Update the image's source to the string being stored in the data-animate attribute
+      element.setAttribute("src", element.dataset.animate);
+    } else {
+      // Change the attributes back to their non-animated values
+      element.dataset.state = "still";
+      element.setAttribute("src", element.dataset.still);
+    }
   }
-}
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
-function onPlayerStateChange(event) {}
+});
 
-icon.addEventListener('click', displayGiphys)
-clearBtn.addEventListener('click', clearScreen);
+searchButton.addEventListener('click', displayGiphys);
