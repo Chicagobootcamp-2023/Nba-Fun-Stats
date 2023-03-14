@@ -69,6 +69,10 @@ function clearScreen() {
   location.reload();
 };
 
+function clearInput(clearBtn) {
+  document.getElementById(searchWrapper).value = ''
+}
+
 function displayGiphys(event) {
   event.preventDefault();
   
@@ -137,4 +141,4 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {}
 
 icon.addEventListener('click', displayGiphys)
-clearBtn.addEventListener('click', clearScreen);
+clearBtn.addEventListener('click', clearInput);
