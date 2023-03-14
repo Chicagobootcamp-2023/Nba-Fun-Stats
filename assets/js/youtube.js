@@ -1,7 +1,10 @@
-const myApi = 'AIzaSyBsKnp4M8x1OCA7xNSRIJ-BN98k1nQ6FZo';
+const myApi = 'AIzaSyCd4CWH-p6H3sIHmBM3Sx-GI6OMDGdEORI';
 const googleUrl = 'https://www.googleapis.com/youtube/v3';
 
 let player;
+
+// Function gets called when user submits a search. 
+// Creates a url based on the users search and "fetches" data from the api to embedd the video and play it.
 
 function search() {
   const query = document.getElementById('input').value;
@@ -14,6 +17,9 @@ function search() {
     })
     .catch(error => console.error(error));
 }
+
+// Loads the youtube video reuquested and also reloads a new youtube video 
+// within the same container if user submits a new search.
 
 function play(videoId) {
   if (player) {
@@ -30,6 +36,7 @@ function play(videoId) {
     });
   }
 }
+// Plays the video once it is uploaded.
 
 function onPlayerReady(event) {
   event.target.playVideo();
@@ -37,6 +44,9 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
 }
+
+// Adds an event listener to enable the user to submit their searches along with a "prevent default function" 
+// that allows the user to submit additional searches without having to refresh the page.
 
 document.querySelector('.search-button').addEventListener('click', function(event) {
   event.preventDefault();
