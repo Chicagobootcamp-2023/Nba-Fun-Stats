@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(88, 3, 3);;
+    background-color: #676767;
     padding: 0 20px;
 }
 
@@ -96,11 +96,11 @@ body {
 }
 
 .generated-content .youtube-section {
-    background-color: red;
+    background-color: #FFC72C;
 }
 
 .generated-content .gif-section {
-    background-color: red;
+    background-color: #FFC72C;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,22 +108,22 @@ body {
 
 h1 {
     text-align: center;
-    color: white;
-    border-width:3px; 
-    border-style:solid; 
-    border-color:#FF0000; 
+    color: #FFC72C;
+    border-width: 3px; 
+    border-style: solid; 
+    border-color: #FFC72C; 
     padding: 1em;
     font-size: 100px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image:url(nba-logo-banner.png);
+    font-family: 'Lucida Calligraphy', cursive;
+    background-image: url(nba-logo-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 p {
-    margin: 100px;
+    margin: 10px;
     text-align: center;
-    color: white;
+    color: #FFC72C;
     font-size: 40px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

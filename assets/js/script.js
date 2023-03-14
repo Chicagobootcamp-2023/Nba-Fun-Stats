@@ -70,7 +70,7 @@ function displayGiphys(event) {
   var apiKey = 'X1UC9EboOvWecSBjWd0oHOvipre8bgHX';
   var giphyUrl = 'https://api.giphy.com/v1/gifs/search';
   var offset = Math.floor(Math.random() * 200); // generate a random offset between 0 and 200
-  var requestUrl = giphyUrl + '?api_key=' + apiKey + '&limit=5&rating=g&q=' + searchTerm + '&offset=' + offset;
+  var requestUrl = giphyUrl + '?api_key=' + apiKey + '&limit=2&rating=g&q=' + searchTerm + '&offset=' + offset;
   
   fetch(requestUrl)
   .then(function(response) {
