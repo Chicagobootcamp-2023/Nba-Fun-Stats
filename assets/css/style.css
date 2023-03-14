@@ -141,4 +141,15 @@ body {
 .gif-section {
     position: right;
 }
+<<<<<<< HEAD
+>>>>>>> main
+=======
+
+.gif-section {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: -50px;
+    top: 50px;
+}
 >>>>>>> main
