@@ -85,9 +85,9 @@ function displayGiphys(event) {
       var title = giphs.data[i].title;
       var imageTag = document.createElement('img');
       var imageTitle = document.createElement('p');
-      imageTag.setAttribute('src', giphs.data[i].images.original_still.url);
-      imageTag.setAttribute('data-animate', giphs.data[i].images.original.url);
-      imageTag.setAttribute('data-still', giphs.data[i].images.original_still.url);
+      imageTag.setAttribute('src', giphs.data[i].images.fixed_height_still.url);
+      imageTag.setAttribute('data-animate', giphs.data[i].images.fixed_height.url);
+      imageTag.setAttribute('data-still', giphs.data[i].images.fixed_height_still.url);
       imageTag.setAttribute('data-state', "still")
       imageTitle.textContent = title;
       imageContainer.append(imageTag);
