@@ -1,4 +1,4 @@
-# NBA Video and Gif Generator
+# Hoop Wizard
 
 ## Description
 
@@ -16,6 +16,6 @@ When the user loads the page, they can choose a team from the search box and the
 
 ## Credits
 
-Collaborators are [Adrian](https://github.com/Adrian-G-C), [David](https://github.com/davidkolodziej), [Jessie](https://github.com/MrMessyFace), and [Kar](https://github.com/karsodhi), with [Theo](https://github.com/Tward9) as our advisor. The autocompleting search bar function was taken from [Coding Nepal](https://www.codingnepalweb.com/search-bar-autocomplete-search-suggestions-javascript/).
+Collaborators are [Adrian](https://github.com/Adrian-G-C), [David](https://github.com/davidkolodziej), [Jessie](https://github.com/MrMessyFace), and [Kar](https://github.com/karsodhi), with [Theo](https://github.com/Tward9) as our advisor. The autocompleting search bar function was taken from [Coding Nepal](https://www.codingnepalweb.com/search-bar-autocomplete-search-suggestions-javascript/). The giphy generator was taken from two class activities combined.
 
-https://truck-norris.github.io/nba-fun-stats/
+https://truck-norris.github.io/hoop-wizard/

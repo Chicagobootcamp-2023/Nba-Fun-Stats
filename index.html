@@ -8,27 +8,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-    <title>NBA Video and Gif Generator</title>
+    <title>Hoop Wizard</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="search-bar">
       <div class="search-input">
-        <a href="" target="_blank" hidden></a>
-        <input type="text" placeholder="Type a basketball team here..." id="query">
-        <div class="autocom-box">
+        <input type="text" placeholder="Type a basketball team here..." id="input">
+        <div class="autocomplete">
           <!-- Team Names populate here -->
         </div>
-        <div class="icon"><i class="fas fa-search"></i></div>
-
-        <div class="clear"><i class="fa fa-trash"></i></div>
+        <div class="search-button"><i class="fa fa-search"></i></div>
       </div>
     </div>
-    <div id="player"></div>
+    <section class="youtube-section" id="youtube-player"></section>
     </div>
-    <section id="giphy-images" class="image-space"></section>
-  
-    <script src="assets/js/teams.js"></script>
+    <section class="gif-section" id="giphy-images"></section>
+
+    
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/teams.js"></script>
     <script src="assets/js/youtube.js"></script>
     <script src="https://www.youtube.com/player_api"></script>
   </body>
