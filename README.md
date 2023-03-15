@@ -6,13 +6,13 @@ We were tasked with creating an app that calls for API data from two different s
 
 ## Installation
 
-To be updated later.
+We used a combination of jQuery functions, for loops, font awesome icons, and two API functions that pull data from Giphy and YouTube.
 
 ## Usage
 
 When the user loads the page, they can choose a team from the search box and the team name will auto populate in a drop down box based on what words were used to search with. Once a team is selected, a set of gifs and a recent YouTube video will populate the screen.
 
-![Screenshot](...)
+![Screenshot](assets/images/truck-norris.github.io_hoop-wizard_.png)
 
 ## Credits
 
