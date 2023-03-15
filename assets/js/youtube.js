@@ -5,7 +5,6 @@ let player;
 
 // Function gets called when user submits a search. 
 // Creates a url based on the users search and "fetches" data from the api to embedd the video and play it.
-
 function search() {
   const query = document.getElementById('input').value;
   const url = `${googleUrl}/search?key=${myApi}&part=snippet&q=${query}&type=video&videoEmbeddable=true&maxResults=1&videoDuration=short`;
@@ -20,7 +19,6 @@ function search() {
 
 // Loads the youtube video reuquested and also reloads a new youtube video 
 // within the same container if user submits a new search.
-
 function play(videoId) {
   if (player) {
     player.loadVideoById(videoId);
@@ -36,8 +34,8 @@ function play(videoId) {
     });
   }
 }
-// Plays the video once it is uploaded.
 
+// Plays the video once it is uploaded.
 function onPlayerReady(event) {
   event.target.playVideo();
 }
@@ -47,7 +45,6 @@ function onPlayerStateChange(event) {
 
 // Adds an event listener to enable the user to submit their searches along with a "prevent default function" 
 // that allows the user to submit additional searches without having to refresh the page.
-
 document.querySelector('.search-button').addEventListener('click', function(event) {
   event.preventDefault();
   search();
