@@ -18,6 +18,7 @@ const teamBox = searchWrapper.querySelector(".autocomplete");
 const searchButton = searchWrapper.querySelector(".search-button");
 var imageContainer = document.querySelector('#giphy-images')
 // let linkTag = searchWrapper.querySelector("a");
+var videoContainer = document.querySelector('#youtube-player')
 let webLink;
 
 // if user press any key and release
@@ -66,19 +67,23 @@ function displayGiphys(event) {
   event.preventDefault();
   
   var searchTerm = inputBox.value;
-  console.log(searchTerm);
+  console.log('You are currently searching for', searchTerm + '.');
   var apiKey = 'X1UC9EboOvWecSBjWd0oHOvipre8bgHX';
   var giphyUrl = 'https://api.giphy.com/v1/gifs/search';
   var offset = Math.floor(Math.random() * 200); // generate a random offset between 0 and 200
   var requestUrl = giphyUrl + '?api_key=' + apiKey + '&limit=2&rating=g&q=' + searchTerm + '&offset=' + offset;
   
+  // if (searchTerm !== emptyArray) {
+  //   return imageContainer.innerHTML = ''
+  // }
+
   fetch(requestUrl)
   .then(function(response) {
     console.log('The status of this page is', response.status + '.');
     return response.json();
     
   }).then(function(giphs) {
-    console.log('You searched for:', giphs.data);
+    console.log('The data from this search is:', giphs.data + '.');
     imageContainer.innerHTML = ''
 
     for (var i = 0; i < giphs.data.length; i++) {
@@ -118,6 +123,8 @@ imageContainer.addEventListener("click", function(event) {
       element.setAttribute("src", element.dataset.still);
     }
   }
+
+  $(".generated-content").show();
 });
 
 searchButton.addEventListener('click', displayGiphys);
