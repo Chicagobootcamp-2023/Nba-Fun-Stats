@@ -19,7 +19,7 @@ body {
 
 .search-bar {
     max-width: 450px;
-    margin: 50px auto;
+    margin: 20px auto;
 }
 
 .search-bar .search-input {
@@ -108,7 +108,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #FFC72C;
+    color: white;
     border-width: 3px; 
     border-style: solid; 
     border-color: #FFC72C; 
@@ -118,12 +118,14 @@ h1 {
     background-image: url(nba-logo-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-text-stroke: 1px #FFC72C;
 }
 
 p {
     margin: 10px;
     text-align: center;
     color: #FFC72C;
+    -webkit-text-stroke: 1px white;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
