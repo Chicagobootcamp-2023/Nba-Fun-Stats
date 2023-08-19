@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Hoop Wizard</title>
   </head>
+
   <body>
-    <header>
-      <h1>Hoop Wizard</h1>
-      <p>Generate videos and gifs for your favorite NBA team!</p>
-    </header>
-    <div class="search-bar">
-      <div class="search-input">
-        <input type="text" placeholder="Type a basketball team here..." id="input">
-        <div class="autocomplete">
-          <!-- Team Names populate here -->
+    <div class="container">
+      <div class="wrapper">
+        <header class="header">
+          <h1>Hoop Wizard</h1>
+        </header>
+        <div class="banner">
+          <p>Generate videos and gifs for your favorite NBA team!</p>
         </div>
-        <div class="search-button"><i class="fa fa-search"></i></div>
+        <div class="search-bar">
+          <div class="search-input">
+            <input
+              type="text"
+              placeholder="Type a basketball team here..."
+              id="input"
+            />
+            <div class="autocomplete">
+              <!-- Team Names populate here -->
+            </div>
+            <div class="search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+        <div class="generated-content">
+          <section class="youtube-section" id="youtube-player"></section>
+          <section class="gif-section" id="giphy-images"></section>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="copyright">
+          &copy; 2023 Truck Norris. All Rights Reserved.
+        </div>
       </div>
     </div>
-    <div class="generated-content">
-      <section class="youtube-section" id="youtube-player"></section>
-      <section class="gif-section" id="giphy-images"></section>
-    </div>
-    
+
+    <script
+      src="https://kit.fontawesome.com/1167eaf0f6.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/teams.js"></script>
     <script src="assets/js/youtube.js"></script>
